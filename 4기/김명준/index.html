@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>과제 제출 위치 안내하는 HTML 문서</title>
+</head>
+<body>
+    <div>
+        첫번째 입력값 : <span id="n1"></span>
+        <span id="gubun"></span>
+        두번째 입력값 : <span id="n2"></span>
+        <div>
+            <span>결과값은 :</span> <span id="result"></span>
+        </div>
+    </div>
+    <script>
+		var num1 = Number(prompt('첫번째 숫자'));		
+		var type = prompt('덧셈 : +, 뺄셈 : -');
+		var num2 = Number(prompt('두번째 숫자'));
+		
+        var calc = calcFunc(num1, num2, type);
+
+        function calcFunc(num1, num2, type){
+            var sum = 0;
+            
+            if(type == '+'){
+                return sum = num1+num2;
+            } else {
+                return sum = num1-num2;
+            }            
+        }		
+		
+		document.getElementById("n1").innerHTML = num1;
+        document.getElementById("gubun").innerHTML = type;
+        document.getElementById("n2").innerHTML = num2;
+		document.getElementById("result").innerHTML = calc;
+		
+    </script>
+</body>
+</html>
